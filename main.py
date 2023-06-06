@@ -3,6 +3,7 @@ from kivy.lang import Builder
 from telas import *
 from botoes import *
 import requests
+import certifi
 from bannervenda import BannerVenda
 from bannervendedor import BannerVendedor
 import os
@@ -12,6 +13,7 @@ from datetime import date
 
 GUI = Builder.load_file("main.kv")
 link = "https://app-kivy-hashtag-default-rtdb.firebaseio.com/"
+ops.environ["SSL_CERT_FILE"] = certifi.where()
 
 
 class MainApp(App):
